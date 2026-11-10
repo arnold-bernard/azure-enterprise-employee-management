@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management System</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Employee Management System</h1>
+      <p>Azure Enterprise DevOps Learning Project</p>
+    </header>
+
+    <section class="panel">
+      <h2 id="form-title">Add employee</h2>
+      <form id="employee-form">
+        <input type="hidden" id="employee-id">
+        <label for="name">Name</label>
+        <input id="name" maxlength="100" required placeholder="Employee name">
+        <label for="department">Department</label>
+        <input id="department" maxlength="100" required placeholder="Department">
+        <label for="email">Email</label>
+        <input id="email" type="email" required placeholder="name@example.com">
+        <div class="actions">
+          <button id="save-button" type="submit">Add employee</button>
+          <button id="cancel-button" class="secondary" type="button">Cancel</button>
+        </div>
+      </form>
+      <p id="message" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Employee directory</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ID</th><th>Name</th><th>Department</th><th>Email</th><th>Actions</th></tr></thead>
+          <tbody id="employee-list"><tr><td colspan="5">Loading...</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
