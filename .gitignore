@@ -1,21 +1,126 @@
-.gradle
+
+# ==========================================
+# Gradle
+# ==========================================
+.gradle/
 **/build/
 !**/src/**/build/
 
-# Ignore Gradle GUI config
+# Gradle GUI configuration
 gradle-app.setting
 
-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
-!gradle-wrapper.jar
-
-# Avoid ignore Gradle wrapper properties
-!gradle-wrapper.properties
-
-# Cache of project
+# Gradle task name cache
 .gradletasknamecache
 
-# Eclipse Gradle plugin generated files
-# Eclipse Core
+# Keep Gradle Wrapper files
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# ==========================================
+# Java compiled files and packages
+# ==========================================
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Keep Gradle Wrapper JAR
+!gradle/wrapper/gradle-wrapper.jar
+
+# ==========================================
+# Environment variables and secrets
+# ==========================================
+.env
+.env.*
+!.env.example
+*.env
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+secrets/
+credentials/
+*.secret
+
+# ==========================================
+# Logs and temporary files
+# ==========================================
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+*.orig
+
+# ==========================================
+# IntelliJ IDEA
+# ==========================================
+.idea/
+*.iml
+
+# ==========================================
+# Visual Studio Code
+# ==========================================
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# ==========================================
+# Eclipse
+# ==========================================
 .project
-# JDT-specific (Eclipse Java Development Tools)
 .classpath
+.settings/
+
+# ==========================================
+# Operating system files
+# ==========================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================================
+# Test and coverage reports
+# ==========================================
+test-results/
+reports/
+coverage/
+jacoco/
+*.exec
+
+# ==========================================
+# Docker local artefacts
+# ==========================================
+.docker/
+docker-compose.override.yml
+
+# ==========================================
+# Terraform state and local files
+# ==========================================
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# ==========================================
+# Local database files
+# ==========================================
+*.sqlite
+*.db
+mysql-data/
